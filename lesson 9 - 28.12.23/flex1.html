@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            width: 800px;
+            height: 400px;
+            background-color: #999;
+            margin: 0 auto;
+            display: flex;
+            /* flex-direction: column; */
+        }
+
+        .item {
+            font-size: 1.3rem;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            flex-basis: 100px;
+        }
+
+        .item1 {
+            background-color: red;
+            flex-grow: 1;
+        }
+
+        .item2 {
+            background-color: green;
+            flex-grow: 2;
+        }
+
+        .item3 {
+            background-color: blue;
+        }
+
+        .item4 {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="item item1">item1</div>
+        <div class="item item2">item2</div>
+        <div class="item item3">item3</div>
+        <div class="item item4">item4</div>
+    </section>
+
+</body>
+
+</html>

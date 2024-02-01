@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gris Homework</title>
+    <style>
+        .container {
+            width: 1000px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 100px 200px 400px 100px;
+            gap: 15px;
+            grid-template-areas:
+                "header header header header"
+                "box1 box2 box3 aside"
+                "main main main aside"
+                "footer footer footer footer"
+            ;
+        }
+
+        .item {
+            background-color: hotpink;
+            padding: 20px;
+            display: flex;
+            font-size: 1.5rem;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .header {
+            grid-area: header;
+        }
+
+        .box1 {
+            grid-area: box1;
+        }
+
+        .box2 {
+            grid-area: box2;
+        }
+
+        .box3 {
+            grid-area: box3;
+        }
+
+
+        .aside {
+            grid-area: aside;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="item header">sifra</div>
+        <div class="item box1">sifra</div>
+        <div class="item box2">sifra</div>
+        <div class="item box3">sifra</div>
+        <div class="item main">sifra</div>
+        <div class="item aside">sifra</div>
+        <div class="item footer">sifra</div>
+    </div>
+
+</body>
+
+</html>

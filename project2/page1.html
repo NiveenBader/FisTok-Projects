@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('path 15.png');
+            background-repeat: no-repeat;
+            background-position: fill;
+            background-size: cover;
+        }
+
+        .container {
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            background-color: #1A1A1AD4;
+            top: 157px;
+            left: 1056px;
+            width: 569px;
+            height: 643px;
+            position: relative;
+        }
+
+        h2 {
+            color: #ffffff;
+            top: 233px;
+            left: 1136px;
+            width: 413px;
+            height: 53px;
+            text-align: left;
+            font: normal normal 900 36px/53px Heebo;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+            font-size: 36px;
+        }
+
+        p {
+            top: 307px;
+            left: 1131px;
+            width: 417px;
+            height: 58px;
+            text-align: left;
+            font: normal normal normal 20px/29px Heebo;
+            letter-spacing: 0px;
+            color: #F9F9F9;
+            opacity: 1;
+            font-size: 20px;
+        }
+
+        form {
+            display: block;
+            position: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            top: 434px;
+            left: 1131px;
+            width: 418px;
+            height: 167px;
+            opacity: 1;
+            border: 1px soild #D31C75;
+
+        }
+
+        label {
+            display: block;
+            top: 409px;
+            left: 1491px;
+            width: 58px;
+            height: 24px;
+            text-align: left;
+            font: normal normal bold 16px/24px Heebo;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+
+
+        }
+
+        input {
+            border: 1px solid #D31C75;
+            height: 50px;
+            width: 418px;
+        }
+
+        input[type=submit] {
+            top: 620px;
+            left: 1430px;
+            width: 68px;
+            height: 32px;
+            text-align: center;
+            color: #ffffff;
+            font: normal normal bold 22px/30px Heebo;
+            letter-spacing: 0.33px;
+            opacity: 1;
+            background-color: #D31C75;
+            margin-left: 0px;
+            margin-top: 50px;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width:800px) {
+            body {
+                background-image: url('path 15.png');
+                background-repeat: no-repeat;
+                background-position: fill;
+                background-size: cover;
+            }
+
+            .container {
+                position: absolute;
+                top: 89px;
+                left: 37px;
+                width: 299px;
+                height: 441px;
+                /* UI Properties */
+                background: #1A1A1AD4 0% 0% no-repeat padding-box;
+                opacity: 1;
+            }
+
+            h2 {
+                top: 131px;
+                left: 113px;
+                width: 146px;
+                height: 67px;
+                text-align: center;
+                font: normal normal 900 25px/30px Heebo;
+                letter-spacing: 0px;
+                color: #FFFFFF;
+                opacity: 1;
+            }
+
+            p {
+                top: 211px;
+                left: 71px;
+                width: 229px;
+                height: 66px;
+                text-align: center;
+                font: normal normal normal 15px/22px Heebo;
+                letter-spacing: 0px;
+                color: #F9F9F9;
+                opacity: 1;
+            }
+
+            form {
+
+                top: 299px;
+                left: 71px;
+                width: 230px;
+                height: 131px;
+                opacity: 1;
+
+            }
+
+            label {
+
+
+                font-size: 14px;
+
+            }
+
+            input {
+                width: 230px;
+                height: 28px;
+            }
+
+            input[type=submit] {
+
+                top: 452px;
+                left: 242px;
+                width: 46px;
+                height: 22px;
+                font-size: 15px;
+                text-align: left;
+                font: normal normal bold 15px/20px Heebo;
+                letter-spacing: 0.23px;
+                color: #FFFFFF;
+                opacity: 1;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Let Me Lead You</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <form action="">
+
+            <label for="full-name">Name </label>
+            <input type="text" id="full-name" placeholder="Full-name"><br><br>
+
+
+            <label for="">Email</label>
+            <input type="email" name="" id="email" placeholder="Email" required><br>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+</body>
+
+</html>

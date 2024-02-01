@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>option2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            display: block;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .item1 {
+            height: 1081px;
+            width: 1085vw;
+            background: transparent url('Coffee.png') 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+        }
+
+        .item2 {
+            width: 835vw;
+            height: 1081px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            opacity: 1;
+            display: flex;
+            font-size: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        @media (max-width:650px) {
+            section {
+                display: flex;
+                flex-direction: column;
+            }
+
+            form {
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 10px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="item1">
+            <img src="Coffee.png" alt="coffee">
+        </div>
+        <div class="item2">
+            <h2>Let Me Lead You</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <form action="">
+
+                <label for="full-name">Name </label>
+                <input type="text" id="full-name" placeholder="Full-name"><br><br>
+
+
+                <label for="">Email</label>
+                <input type="email" name="" id="email" placeholder="Email" required><br>
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+</body>
+
+</html>

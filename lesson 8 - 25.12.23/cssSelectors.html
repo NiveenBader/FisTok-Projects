@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        div>h1 {
+            font-size: 35pt;
+            color: tomato;
+        }
+
+        /* h1+p {
+            color: hotpink;
+            font-size: 16pt;
+        } */
+        h1~p {
+            color: hotpink;
+            font-size: 16pt;
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header>
+            <p>content</p>
+            <h1>contentNNN</h1>
+            <p>content00000</p>
+            <p>content00000</p>
+            <p>content00000</p>
+            <p>content00000</p>
+            <h1>content NO</h1>
+        </header>
+        <p>content</p>
+        <h1>content MMM</h1>
+        <p>content000000</p>
+        <p>content000000</p>
+        <p>content000000</p>
+        <p>content000000</p>
+        <h1>content</h1>
+    </div>
+</body>
+
+</html>

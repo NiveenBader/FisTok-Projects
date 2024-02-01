@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 70vw;
+            height: 500px;
+            margin: 0 auto;
+            padding: 20px;
+
+        }
+
+        .box::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            background-image: url('path 15.png');
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: cover;
+        }
+
+        .box {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Contact Form</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <form action="/submit_form" method="post">
+            <label for="fname">Full Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
