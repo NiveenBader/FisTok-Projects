@@ -96,6 +96,41 @@ function number() {
     } else {
         elem.style.backgroundColor = "yellow";
     }
+}
+
+function replace() {
+    const str1 = document.getElementById("str1").value;
+    const str2 = document.getElementById("str2").value;
+
+    document.getElementById("str1").value = str2;
+    document.getElementById("str2").value = str1;
+
+}
 
 
+
+function salarycalcultor() {
+    const user = document.getElementById("user").value;
+    const salary = document.getElementById("salary").value;
+
+    let raise = salary * 1.1;
+
+    if (raise > 6000) {
+        raise = salary * 1.05;
+    }
+
+    // document.getElementById("output3").innerHTML = 'השכר החדש של ' + user + ' הוא ' + raise + ' ש"ח';
+    document.getElementById("output4").innerHTML = `השכר החדש של ${user} הוא ${raise} ש"ח`;
+}
+
+function check() {
+    const age = +document.getElementById("age").value;
+    const height = +document.getElementById("height").value;
+
+    if (age >= 14 && age <= 18 && height >= 182 || age >= 21 && age <= 26 && height >= 182)
+    /* ((age >= 14 && age <= 18 || age >= 21 && age <= 26) && height >= 182)  */ {
+        document.getElementById("output5").innerHTML = " התקבלת";
+    } else {
+        document.getElementById("output5").innerHTML = " you can not join";
+    }
 }
