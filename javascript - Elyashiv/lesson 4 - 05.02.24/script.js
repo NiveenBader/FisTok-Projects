@@ -134,3 +134,13 @@ function check() {
         document.getElementById("output5").innerHTML = " you can not join";
     }
 }
+
+// Another Solution
+/*   const age = +document.getElementById("age").value;
+    const height = +document.getElementById("height").value;
+    conts range = age >= 14 && age <= 18 || age >= 21 && age <= 26;
+
+    if (range && height >= 182 ){
+        document.getElementById("output5").innerHTML = " התקבלת"; 
+    } else { document.getElementById("output5").innerHTML = " you can not join";}
+    */
