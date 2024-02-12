@@ -8,3 +8,46 @@ function task1() {
     }
     document.getElementById("output1").innerHTML = res;
 }
+
+
+function task2(elem) {
+    const num = +elem.value;
+    let isPrime = true;
+
+    let i = 2;
+
+    while (i < num) {
+
+        if (num % i === 0) {
+            // הפונקציה בודקת רת השארית , אם יש שארית אז הערך זה שלילי תעצור את הפונקציה אם זה שווה אפס אז התוצאה חיובית תמישך
+            isPrime = false;
+            break;
+        }
+
+        i++;
+    }
+    const output = document.getElementById("output2");
+
+    if (isPrime) {
+        output.style.color = "green";
+        output.innerHTML = 'ראשוני';
+    } else {
+        output.style.color = "blue"
+        output.innerHTML = 'פריק';
+
+    }
+}
+function task3(elem) {
+    const num = +elem.value;
+
+    let i = 0;
+    let res = '';
+
+
+
+
+    while (i <= num) {
+        res = i + ', ';
+    }
+    document.getElementById("output3").innerHTML = res;
+}
