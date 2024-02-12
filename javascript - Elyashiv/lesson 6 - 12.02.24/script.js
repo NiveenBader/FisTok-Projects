@@ -37,17 +37,15 @@ function task2(elem) {
 
     }
 }
-function task3(elem) {
-    const num = +elem.value;
+function task3() {
+    const num = +document.getElementById("num1").value;
+    let result = '';
 
-    let i = 0;
-    let res = '';
-
-
-
-
+    let i = 1;
     while (i <= num) {
-        res = i + ', ';
+        result += i + ' ,';
+        i++;
+
     }
-    document.getElementById("output3").innerHTML = res;
+    document.getElementById("output3").innerHTML = result;
 }
