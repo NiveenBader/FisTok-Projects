@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
 
 :root {
-    --bg: #b9ae0a;
+    --bg: #b3b53f;
 }
 
 body {
@@ -46,6 +46,7 @@ button {
     padding: 8px 12px;
     border-radius: 6px;
     border: none;
+    margin: 6px;
 }
 
 button:hover {
@@ -63,4 +64,8 @@ select {
 .ltr {
     direction: ltr;
     display: inline-block;
+}
+
+#numbers {
+    padding-bottom: 16px;
 }
