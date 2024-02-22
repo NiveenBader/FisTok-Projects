@@ -50,17 +50,36 @@ function task3() {
     document.getElementById("output3").innerHTML = result;
 }
 
-/* function task() {
+/* function task4() {
     const n1 = +document.getElementById("num2").value;
     const n2 = +document.getElementById("num3").value;
-
     let result = '';
-    let start 
-    let end 
 
-    let
+    let i = n1;
+
+    while (i <= n2) {
+        result += i + ', ';
+        i++;
+    }
+    document.getElementById("output4").innerHTML = result;
+
+} */
+
+function task4() {
+    const n1 = +document.getElementById("num2").value;
+    const n2 = +document.getElementById("num3").value;
+    let result = '';
+
+    let start = Math.min(n1, n2);
+    let end = Math.max(n1, n2);
+
+    while (start <= end) {
+        result += start + ',';
+
+        start++;
+    }
+    document.getElementById("output4").innerHTML = result;
 }
- */
 
 function task5() {
     const num = +document.getElementById("num4").value;
