@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
 
 :root {
-    --bg: #b3b53f;
+    --bg: #979929;
 }
 
 body {
@@ -59,13 +59,4 @@ select {
     padding: 8px 12px;
     border-radius: 5px;
     margin-top: 3px;
-}
-
-.ltr {
-    direction: ltr;
-    display: inline-block;
-}
-
-#numbers {
-    padding-bottom: 16px;
 }
