@@ -24,12 +24,20 @@ function add() {
 
     const input = document.querySelector('input');
 
+    if (!input.value) {
+        return;
+    }
     const li = document.createElement('li');
 
     li.innerHTML = input.value;
 
     li.addEventListener('click', function (ev) {
-        ev.target.remove();
+
+        const isAllowed = confirm(`Are You Sure you wat to Delete ${ev.target.innerHTML}?`);
+
+        if (isAllowed) {
+            ev.target.remove();
+        }
     });
 
     tasks.appendChild(li);
