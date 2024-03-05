@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #traffic-light {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .light {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #green {
+            background-color: green;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Traffic Light Simulator</title>
+</head>
+
+<body>
+
+    <div id="traffic-light">
+        <div id="red" class="light"></div>
+        <div id="yellow" class="light"></div>
+        <div id="green" class="light"></div>
+        <button id="playPauseButton">Play</button>
+    </div>
+
+    <script>
+        let intervalId;
+        let lights = ['red', 'yellow', 'green'];
+        let currentIndex = 0;
+
+        function changeLight() {
+            document.getElementById(lights[currentIndex]).style.backgroundColor = '';
+            currentIndex = (currentIndex + 1) % lights.length;
+            document.getElementById(lights[currentIndex]).style.backgroundColor = lights[currentIndex];
+        }
+
+        function togglePlayPause() {
+            const button = document.getElementById('playPauseButton');
+            if (button.textContent === 'Play') {
+                intervalId = setInterval(changeLight, 2000); // Change light every 2 seconds
+                button.textContent = 'Pause';
+            } else {
+                clearInterval(intervalId);
+                button.textContent = 'Play';
+            }
+        }
+
+        document.getElementById('playPauseButton').addEventListener('click', togglePlayPause);
+    </script>
+
+</body>
+
+</html>
