@@ -1,5 +1,5 @@
 const traffic1 = document.querySelector('.traffic-light');
-const traffic2 = document.querySelector('.traffic-light-error');
+const traffic2 = document.querySelector('.traffic-light.warning');
 
 const first = traffic1.querySelector('div');
 const second = traffic1.querySelector('div:nth-child(2)');
@@ -49,7 +49,6 @@ const flashing = traffic2.querySelector('div:nth-child(2)');
 let isFlashing = false;
 
 setInterval(function () {
-    flashing.style.backgroundColor = isFlashing ? '' : 'yellow';
-    isFlshing = !isFlashing;
-
+    flashing.style.backgroundColor = isFlashing ? 'pink' : 'yellow';
+    isFlashing = !isFlashing;
 }, 1000);
