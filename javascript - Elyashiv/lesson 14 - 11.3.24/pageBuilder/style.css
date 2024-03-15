@@ -102,3 +102,7 @@ nav a:hover {
 #params>div {
     display: none;
 }
+
+#params>div.show {
+    display: block;
+}
