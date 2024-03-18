@@ -23,6 +23,7 @@ for (const div of divs) {
         isX = !isX;
         // הפעלת הפונקציה של המחווה הויזואלית
         showTurn();
+        checkWinner();
     });
 }
 
@@ -39,4 +40,9 @@ function showTurn() {
     } else {
         document.querySelector("#players>div:last-child").classList.add('currentTurn');
     }
+}
+
+function checkWinner() {
+
+
 }
