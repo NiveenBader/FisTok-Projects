@@ -2,6 +2,7 @@ function login(ev) {
     ev.preventDefault();
 
     const { userName, password } = ev.target.elements;
+    console.log(userName, password);
     const obj = {
         userName: userName.value,
         password: password.value,
@@ -29,6 +30,7 @@ function login(ev) {
         })
         .then(data => {
             console.log(data);
+            ev.target.style.display = 'none';
 
         })
         .catch(err => {
