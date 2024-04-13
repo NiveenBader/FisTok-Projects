@@ -1,5 +1,6 @@
 const userElem = document.querySelector("#loggedin");
 const loginElem = document.querySelector("#login");
+const articlesEndpoint = 'https://api.shipap.co.il/articles';
 
 function login(ev) {
     // מבטל את פעולת ברירת המחדל של הדפדפן
@@ -46,6 +47,7 @@ function login(ev) {
             document.querySelector("#fullName").innerText = data.fullName;
             userElem.style.display = 'block';
             loginElem.style.display = 'none';
+            getArticles();
         })
         // כשיש שגיאה
         .catch(err => {
@@ -81,8 +83,44 @@ function getUserStatus() {
         .then(data => {
             document.querySelector("#fullName").innerText = data.fullName;
             userElem.style.display = 'block';
+
+
         })
         .catch(err => {
             loginElem.style.display = 'block';
         });
 }
+
+/* function getArticles() {
+    fetch(`https://api.shipap.co.il/articles`, {
+        credentials: 'include',
+    })
+        .then(res => res.json())
+        .then(data => {
+            alert("articlesEndpoint");
+        });
+} */
+
+function getArticles() {
+    fetch(`https://api.shipap.co.il/articles`, {
+        credentials: 'include',
+    })
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw new Error('Failed to fetch articles');
+            }
+        })
+        .then(data => {
+            // Here you can do something with the articles data
+            // For example, you can display them on the page
+            console.log(data); // Check the data structure in the console
+            // Example: renderArticles(data);
+            open('https://api.shipap.co.il/articles');
+        })
+        .catch(err => {
+            // Handle errors here
+            console.error(err);
+        });
+} 
