@@ -29,11 +29,13 @@ function login(ev) {
             }
         })
         .then(data => {
+            alert(`ההתחברות של ${data.fullName} בוצעה בהצלחה!`);
             console.log(data);
             ev.target.style.display = 'none';
 
         })
         .catch(err => {
             console.log(err.message);
+            //alert(err.message);
         });
 }
