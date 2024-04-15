@@ -26,7 +26,7 @@ class student {
     }
 
 }
-
+/* 
 const student1 = new student({
     id: 9202,
     firstName: "יפה",
@@ -44,12 +44,16 @@ const student1 = new student({
         61,
         85
     ]
-});
+}); */
 
 (async function getstudents() {
     const res = await fetch("../students.json");
     const data = await res.json();
-    const students = data.map(s => new students(s));
+    const students = data.map(s => new Student(s));
+    const ul = document.createElement("ul");
+
+
+
 })()
 
 // יצירת ציונים פיקטיביים לכל סטודנט
