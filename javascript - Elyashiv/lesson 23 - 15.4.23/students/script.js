@@ -27,13 +27,30 @@ class student {
 
 }
 
-const student1 = new student("Neveen", "Bader", "0505050505", "1994-05-25", "Yad-Hashmona", [100, 100, , 98, 99]);
+const student1 = new student({
+    id: 9202,
+    firstName: "יפה",
+    lastName: "בהרב",
+    phone: "051-5892982",
+    email: "abc362@gmail.com",
+    birthday: "2003-06-08",
+    city: "ירוחם",
+    grades: [
+        85,
+        93,
+        41,
+        74,
+        86,
+        61,
+        85
+    ]
+});
 
 (async function getstudents() {
     const res = await fetch("../students.json");
     const data = await res.json();
     const students = data.map(s => new students(s));
-})
+})()
 
 // יצירת ציונים פיקטיביים לכל סטודנט
 /* students.forEach(s => {
