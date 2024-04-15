@@ -117,7 +117,8 @@ function getArticles() {
             // For example, you can display them on the page
             console.log(data); // Check the data structure in the console
             // Example: renderArticles(data);
-            open('https://api.shipap.co.il/articles');
+            //open('https://api.shipap.co.il/articles');
+            window.location.href = 'https://api.shipap.co.il/articles';
         })
         .catch(err => {
             // Handle errors here
