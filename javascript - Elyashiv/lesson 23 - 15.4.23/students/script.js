@@ -54,9 +54,6 @@ const student1 = new student({
     const ul = document.createElement("ul");
     document.querySelector(".frame").
 
-
-
-
 })()
 
 // יצירת ציונים פיקטיביים לכל סטודנט
