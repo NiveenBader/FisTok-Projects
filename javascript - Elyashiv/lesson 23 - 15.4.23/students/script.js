@@ -49,8 +49,11 @@ const student1 = new student({
 (async function getstudents() {
     const res = await fetch("../students.json");
     const data = await res.json();
-    const students = data.map(s => new Student(s));
+    const students = data.map(s => new student(s));
+
     const ul = document.createElement("ul");
+    document.querySelector(".frame").
+
 
 
 
