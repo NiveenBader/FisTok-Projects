@@ -14,8 +14,7 @@
 
 <body onload="getUserStatus()">
     <header id="loggedin">
-        שלום <span id="fullName"></span>!
-        <button onclick="logout()">התנתק</button>
+        שלום <span id="fullName"></span>! <button onclick="logout()">התנתק</button>
     </header>
 
     <form onsubmit="login(event)" id="login">
@@ -30,6 +29,10 @@
 
         <button>התחבר</button>
     </form>
+
+    <div class="loaderFrame">
+        <div class="loader"></div>
+    </div>
 </body>
 
 </html>
