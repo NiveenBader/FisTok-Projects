@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars API Fetch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Star Wars Characters</h1>
+        <ul id="characters"></ul>
+        <p id="error-message" class="error" style="display: none;"></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const charactersList = document.getElementById("characters");
+            const errorMessage = document.getElementById("error-message");
+
+            fetch("https://swapi.dev/api/people/")
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    data.results.forEach(character => {
+                        const li = document.createElement("li");
+                        li.textContent = character.name;
+                        charactersList.appendChild(li);
+                    });
+                })
+                .catch(error => {
+                    errorMessage.textContent = error.message;
+                    errorMessage.style.display = "block";
+                });
+        });
+    </script>
+</body>
+
+</html>
