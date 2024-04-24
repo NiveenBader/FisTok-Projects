@@ -5,103 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Wars API Fetch</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        button {
-            margin: 10px;
-            padding: 8px 16px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: left;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        .error {
-            color: red;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <h1>Star Wars API Fetch</h1>
-        <button id="fetchCharacters">Fetch Characters</button>
         <button id="fetchPlanets">Fetch Planets</button>
         <button id="fetchStarships">Fetch Starships</button>
         <button id="fetchVehicles">Fetch Vehicles</button>
-        <button id="fetchSpecies">Fetch Species</button>
-        <button id="fetchFilms">Fetch Films</button>
         <button id="fetchPeople">Fetch People</button>
-        <ul id="data"></ul>
+        <button id="fetchFilms">Fetch Films</button>
+        <button id="fetchSpecies">Fetch Species</button>
+        <div id="data" class="cards"></div>
         <p id="error-message" class="error" style="display: none;"></p>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const fetchButtonIds = ["fetchCharacters", "fetchPlanets", "fetchStarships", "fetchVehicles", "fetchSpecies", "fetchFilms", "fetchPeople"];
-            const dataElement = document.getElementById("data");
-            const errorMessage = document.getElementById("error-message");
-
-            fetchButtonIds.forEach(buttonId => {
-                document.getElementById(buttonId).addEventListener("click", () => {
-                    fetchData(buttonId.replace("fetch", "").toLowerCase());
-                });
-            });
-
-            function fetchData(category) {
-                dataElement.innerHTML = ""; // Clear previous data
-                errorMessage.style.display = "none"; // Hide error message
-                fetch(`https://swapi.info/api/${category}/`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`Failed to fetch ${category}: ${response.status} ${response.statusText}`);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        if (data.results) {
-                            data.results.forEach(item => {
-                                const li = document.createElement("li");
-                                li.textContent = item.name || item.title;
-                                dataElement.appendChild(li);
-                            });
-                        } else {
-                            const li = document.createElement("li");
-                            li.textContent = "No data available";
-                            dataElement.appendChild(li);
-                        }
-                    })
-                    .catch(error => {
-                        errorMessage.textContent = error.message;
-                        errorMessage.style.display = "block";
-                    });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
