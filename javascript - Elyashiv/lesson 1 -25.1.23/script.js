@@ -16,3 +16,17 @@ function multi50() {
 
     alert(n * 50);
 }
+
+let sum = 410;
+half = sum / 2;
+console.log(half);
+
+
+
+
+const add = (num1 = 0, num2 = 0) => {
+    return { num1, num2, sum: num1 + num2 };
+}
+
+const { sum } = add(1, 4);
+console.log(sum);

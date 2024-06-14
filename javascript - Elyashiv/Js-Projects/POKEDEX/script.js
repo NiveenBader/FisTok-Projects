@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const pokemonCards = document.getElementById("pokemon-cards");
     const typeSelect = document.getElementById("type-select");
+    let currentlyEnlargedCard = null;
 
     // Fetch all Pokemon types and populate the select element
     fetch("https://pokeapi.co/api/v2/type/")
@@ -53,6 +54,15 @@ document.addEventListener("DOMContentLoaded", function () {
           <p><strong>Types:</strong> ${types}</p>
           <img src="${data.sprites.front_default}" alt="${data.name}">
         `;
+                pokemonCard.addEventListener('click', function () {
+                    if (currentlyEnlargedCard && currentlyEnlargedCard !== this) {
+                        currentlyEnlargedCard.classList.remove('enlarged');
+                    }
+                    this.classList.toggle('enlarged');
+                    currentlyEnlargedCard = this.classList.contains('enlarged') ? this : null;
+                });
+
+
                 pokemonCards.appendChild(pokemonCard);
             })
             .catch(error => {
@@ -86,3 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fetch all Pokemon initially
     fetchAllPokemon("https://pokeapi.co/api/v2/pokemon/");
 });
+
+function toggleEnlarge(element) {
+    element.classList.toggle('enlarged');
+}
